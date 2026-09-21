@@ -15,15 +15,18 @@ interface TopBarProps {
 
 export default function TopBar({ memberName, tier, initials }: TopBarProps) {
   return (
-    <header className="sticky top-0 z-40 bg-white border-b border-slate-200 px-4 py-3 flex items-center justify-between">
-      <div className="flex items-center gap-2">
-        <span className="text-xl font-bold text-slate-900 tracking-tight">ToyRewards</span>
-        <span className={`text-xs font-semibold px-2 py-0.5 rounded-full ${tierColors[tier]}`} aria-label={`Membership tier: ${tier}`}>
+    <header className="sticky top-0 z-40 bg-white border-b border-slate-100 px-4 py-3 flex items-center justify-between shadow-sm">
+      <div className="flex items-center gap-3">
+        <span className="text-2xl font-black tracking-tight text-slate-900">ToyRewards</span>
+        <span
+          className={`text-xs font-bold px-2.5 py-1 rounded-full uppercase tracking-wide ${tierColors[tier]}`}
+          aria-label={`Membership tier: ${tier}`}
+        >
           {tier}
         </span>
       </div>
       <button
-        className="w-9 h-9 rounded-full bg-orange-100 text-orange-700 font-bold text-sm flex items-center justify-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500"
+        className="w-10 h-10 rounded-full bg-green-100 text-green-700 font-black text-sm flex items-center justify-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
         aria-label={`Account for ${memberName}`}
       >
         {initials}

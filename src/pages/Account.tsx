@@ -45,31 +45,44 @@ export default function Account({ data }: AccountProps) {
   return (
     <main className="pb-24">
       {/* Profile card */}
-      <section className="px-4 pt-4 pb-4" aria-labelledby="profile-heading">
-        <div className="bg-white border border-slate-200 rounded-2xl p-5 flex items-center gap-4">
-          <div className="w-16 h-16 rounded-full bg-orange-100 text-orange-700 font-bold text-xl flex items-center justify-center shrink-0" aria-hidden="true">
+      <section className="px-4 pt-5 pb-4" aria-labelledby="profile-heading">
+        <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-5 flex items-center gap-4">
+          <div
+            className="w-16 h-16 rounded-2xl bg-green-100 text-green-700 font-black text-xl flex items-center justify-center shrink-0"
+            aria-hidden="true"
+          >
             {member.avatarPlaceholder}
           </div>
           <div className="flex-1 min-w-0">
-            <h1 className="text-lg font-bold text-slate-900" id="profile-heading">{member.name}</h1>
-            <div className="flex items-center gap-2 mt-1 flex-wrap">
-              <span className={`text-xs font-semibold px-2 py-0.5 rounded-full ${tierColors[member.tier]}`} aria-label={`Membership tier: ${member.tier}`}>
+            <h1 className="text-lg font-black text-slate-900 tracking-tight" id="profile-heading">{member.name}</h1>
+            <div className="flex items-center gap-2 mt-1.5 flex-wrap">
+              <span
+                className={`text-xs font-bold px-2.5 py-1 rounded-full uppercase tracking-wide ${tierColors[member.tier]}`}
+                aria-label={`Membership tier: ${member.tier}`}
+              >
                 {member.tier}
               </span>
-              <span className="text-xs text-slate-400">Member since {new Date(member.memberSince).toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}</span>
+              <span className="text-xs text-slate-400 font-medium">
+                Member since {new Date(member.memberSince).toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}
+              </span>
             </div>
-            <p className="text-xs text-slate-400 mt-0.5 font-mono">{member.memberId}</p>
+            <p className="text-xs text-slate-400 mt-1 font-mono font-bold">{member.memberId}</p>
           </div>
         </div>
       </section>
 
       {/* Loyalty card / barcode */}
       <section className="px-4 pb-4" aria-labelledby="card-heading">
-        <h2 className="text-sm font-semibold text-slate-500 uppercase tracking-wide mb-2" id="card-heading">Your Loyalty Card</h2>
-        <div className="bg-white border border-slate-200 rounded-2xl p-5 flex flex-col items-center" aria-label="Digital loyalty card with scannable barcode">
-          <p className="text-xs text-slate-400 mb-4">Show this barcode at the register to earn or redeem points</p>
-          <div className="flex gap-0.5 h-16 mb-2" aria-hidden="true">
-            {Array.from({ length: 48 }).map((_, i) => (
+        <h2 className="text-lg font-black text-slate-900 mb-3" id="card-heading">Loyalty Card</h2>
+        <div
+          className="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 flex flex-col items-center"
+          aria-label="Digital loyalty card with scannable barcode"
+        >
+          <p className="text-xs text-slate-400 font-medium mb-5 text-center">
+            Show this barcode at the register to earn or redeem points
+          </p>
+          <div className="flex gap-0.5 h-20 mb-3" aria-hidden="true">
+            {Array.from({ length: 50 }).map((_, i) => (
               <div
                 key={i}
                 className="bg-slate-900"
@@ -77,35 +90,35 @@ export default function Account({ data }: AccountProps) {
               />
             ))}
           </div>
-          <p className="text-sm font-mono font-semibold text-slate-700 tracking-widest">{member.memberId}</p>
-          <p className="text-xs text-slate-400 mt-1">{pointsBalance.current.toLocaleString()} pts balance</p>
+          <p className="text-sm font-mono font-black text-slate-800 tracking-widest">{member.memberId}</p>
+          <p className="text-xs text-slate-400 font-medium mt-1">{pointsBalance.current.toLocaleString()} pts balance</p>
         </div>
       </section>
 
-      {/* Current tier + benefits */}
+      {/* Tier benefits */}
       <section className="px-4 pb-4" aria-labelledby="benefits-heading">
-        <h2 className="text-sm font-semibold text-slate-500 uppercase tracking-wide mb-2" id="benefits-heading">Your Tier Benefits</h2>
-        <div className="bg-white border border-slate-200 rounded-2xl p-4">
-          <div className={`inline-flex items-center gap-1.5 text-sm font-bold px-3 py-1.5 rounded-full mb-3 ${tierColors[member.tier]}`}>
-            <span aria-hidden="true">⭐</span> {member.tier} Member
+        <h2 className="text-lg font-black text-slate-900 mb-3" id="benefits-heading">Your Benefits</h2>
+        <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-5">
+          <div className={`inline-flex items-center gap-2 text-sm font-black px-3 py-2 rounded-xl mb-4 ${tierColors[member.tier]}`}>
+            ⭐ {member.tier} Member
           </div>
-          <dl className="space-y-3 text-sm">
+          <dl className="space-y-4 text-sm">
             <div>
-              <dt className="text-xs text-slate-400 font-semibold uppercase tracking-wide">Earn Rate</dt>
-              <dd className="text-slate-800 mt-0.5">{benefits.earnRate}</dd>
+              <dt className="text-xs text-slate-400 font-bold uppercase tracking-wide mb-1">Earn Rate</dt>
+              <dd className="text-slate-800 font-semibold">{benefits.earnRate}</dd>
             </div>
             <div>
-              <dt className="text-xs text-slate-400 font-semibold uppercase tracking-wide">Offer Access</dt>
-              <dd className="text-slate-800 mt-0.5">{benefits.offers}</dd>
+              <dt className="text-xs text-slate-400 font-bold uppercase tracking-wide mb-1">Offer Access</dt>
+              <dd className="text-slate-800 font-semibold">{benefits.offers}</dd>
             </div>
             {benefits.perks.length > 0 && (
               <div>
-                <dt className="text-xs text-slate-400 font-semibold uppercase tracking-wide">Perks</dt>
-                <dd className="mt-0.5">
-                  <ul className="space-y-1">
+                <dt className="text-xs text-slate-400 font-bold uppercase tracking-wide mb-1">Perks</dt>
+                <dd>
+                  <ul className="space-y-2">
                     {benefits.perks.map((perk, i) => (
-                      <li key={i} className="text-slate-800 flex items-start gap-1.5">
-                        <span className="text-orange-500 mt-0.5" aria-hidden="true">✓</span>
+                      <li key={i} className="text-slate-800 font-semibold flex items-start gap-2">
+                        <span className="text-green-600 mt-0.5 font-black" aria-hidden="true">✓</span>
                         {perk}
                       </li>
                     ))}
@@ -119,31 +132,31 @@ export default function Account({ data }: AccountProps) {
 
       {/* Account actions */}
       <section className="px-4 pb-4" aria-labelledby="actions-heading">
-        <h2 className="text-sm font-semibold text-slate-500 uppercase tracking-wide mb-2" id="actions-heading">Account</h2>
-        <div className="bg-white border border-slate-200 rounded-2xl divide-y divide-slate-100">
+        <h2 className="text-lg font-black text-slate-900 mb-3" id="actions-heading">Account</h2>
+        <div className="bg-white rounded-2xl shadow-sm border border-slate-100 divide-y divide-slate-50">
           {[
             { label: 'Edit Profile', icon: '✏️' },
             { label: 'Notification Preferences', icon: '🔔' },
           ].map(({ label, icon }) => (
             <button
               key={label}
-              className="w-full flex items-center justify-between px-4 py-4 text-sm text-slate-700 min-h-[56px] hover:bg-slate-50 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-orange-500 focus-visible:outline-offset-[-2px]"
+              className="w-full flex items-center justify-between px-4 py-4 text-sm font-bold text-slate-700 min-h-[56px] hover:bg-slate-50 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-green-600 focus-visible:outline-offset-[-2px]"
             >
               <span className="flex items-center gap-3">
                 <span aria-hidden="true">{icon}</span>
                 {label}
               </span>
-              <span className="text-slate-400" aria-hidden="true">›</span>
+              <span className="text-slate-300 font-normal" aria-hidden="true">›</span>
             </button>
           ))}
           <button
-            className="w-full flex items-center justify-between px-4 py-4 text-sm text-red-600 min-h-[56px] hover:bg-red-50 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-red-500 focus-visible:outline-offset-[-2px]"
+            className="w-full flex items-center justify-between px-4 py-4 text-sm font-bold text-red-600 min-h-[56px] hover:bg-red-50 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-red-500 focus-visible:outline-offset-[-2px]"
           >
             <span className="flex items-center gap-3">
               <span aria-hidden="true">🚪</span>
               Sign Out
             </span>
-            <span className="text-red-300" aria-hidden="true">›</span>
+            <span className="text-red-300 font-normal" aria-hidden="true">›</span>
           </button>
         </div>
       </section>

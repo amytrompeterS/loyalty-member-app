@@ -20,7 +20,7 @@ interface HistoryProps {
 function groupByMonth(entries: PurchaseHistoryEntry[]) {
   const map = new Map<string, PurchaseHistoryEntry[]>()
   for (const entry of entries) {
-    const key = entry.date.slice(0, 7) // YYYY-MM
+    const key = entry.date.slice(0, 7)
     if (!map.has(key)) map.set(key, [])
     map.get(key)!.push(entry)
   }
@@ -54,15 +54,15 @@ export default function History({ data }: HistoryProps) {
 
   return (
     <main className="pb-24">
-      <div className="px-4 pt-4 pb-2">
-        <h1 className="text-xl font-bold text-slate-900">Points History</h1>
+      <div className="px-4 pt-5 pb-4">
+        <h1 className="text-2xl font-black text-slate-900">Points History</h1>
       </div>
 
       {/* Chart */}
-      <section className="px-4 mb-4" aria-labelledby="chart-heading">
+      <section className="px-4 mb-5" aria-labelledby="chart-heading">
         <h2 className="sr-only" id="chart-heading">Points balance over time</h2>
-        <div className="bg-white border border-slate-200 rounded-xl p-4">
-          <p className="text-sm font-semibold text-slate-700 mb-3">Balance – Last 12 Months</p>
+        <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-4">
+          <p className="text-sm font-black text-slate-900 mb-4">Balance — Last 12 Months</p>
           <div aria-hidden="true">
             <Line
               data={{
@@ -70,12 +70,12 @@ export default function History({ data }: HistoryProps) {
                 datasets: [
                   {
                     data: chartData,
-                    borderColor: '#f97316',
-                    backgroundColor: 'rgba(249, 115, 22, 0.08)',
+                    borderColor: '#16a34a',
+                    backgroundColor: 'rgba(22, 163, 74, 0.08)',
                     fill: true,
                     tension: 0.4,
                     pointRadius: 3,
-                    pointBackgroundColor: '#f97316',
+                    pointBackgroundColor: '#16a34a',
                   },
                 ],
               }}
@@ -84,39 +84,35 @@ export default function History({ data }: HistoryProps) {
                 plugins: { legend: { display: false }, tooltip: { mode: 'index', intersect: false } },
                 scales: {
                   x: { grid: { display: false }, ticks: { maxTicksLimit: 6, font: { size: 10 } } },
-                  y: { grid: { color: '#f1f5f9' }, ticks: { font: { size: 10 } } },
+                  y: { grid: { color: '#f8fafc' }, ticks: { font: { size: 10 } } },
                 },
               }}
             />
           </div>
-          {/* Screen-reader accessible table */}
           <table className="sr-only" aria-label="Points balance history data">
-            <thead>
-              <tr><th>Date</th><th>Points Balance</th></tr>
-            </thead>
+            <thead><tr><th>Date</th><th>Points Balance</th></tr></thead>
             <tbody>
               {recentEntries.map((e) => (
-                <tr key={e.date}>
-                  <td>{e.date}</td>
-                  <td>{e.runningBalance}</td>
-                </tr>
+                <tr key={e.date}><td>{e.date}</td><td>{e.runningBalance}</td></tr>
               ))}
             </tbody>
           </table>
         </div>
       </section>
 
-      {/* Points activity */}
-      <section className="px-4 mb-4" aria-labelledby="activity-heading">
-        <h2 className="text-sm font-semibold text-slate-500 uppercase tracking-wide mb-2" id="activity-heading">Recent Activity</h2>
-        <div className="bg-white border border-slate-200 rounded-xl divide-y divide-slate-100">
+      {/* Recent activity */}
+      <section className="px-4 mb-5" aria-labelledby="activity-heading">
+        <h2 className="text-lg font-black text-slate-900 mb-3" id="activity-heading">Recent Activity</h2>
+        <div className="bg-white rounded-2xl shadow-sm border border-slate-100 divide-y divide-slate-50">
           {[...pointsHistory].sort((a, b) => b.date.localeCompare(a.date)).slice(0, 8).map((entry, i) => (
-            <div key={i} className="flex items-center justify-between px-4 py-3 gap-2">
+            <div key={i} className="flex items-center justify-between px-4 py-3.5 gap-2">
               <div className="flex-1 min-w-0">
-                <p className="text-sm font-medium text-slate-900 truncate">{entry.description}</p>
-                <p className="text-xs text-slate-400">{new Date(entry.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</p>
+                <p className="text-sm font-bold text-slate-900 truncate">{entry.description}</p>
+                <p className="text-xs text-slate-400 font-medium mt-0.5">
+                  {new Date(entry.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
+                </p>
               </div>
-              <span className={`shrink-0 text-sm font-semibold ${entry.points >= 0 ? 'text-green-600' : 'text-red-500'}`}>
+              <span className={`shrink-0 text-sm font-black ${entry.points >= 0 ? 'text-green-600' : 'text-red-500'}`}>
                 {entry.points >= 0 ? '+' : ''}{entry.points.toLocaleString()}
               </span>
             </div>
@@ -126,11 +122,11 @@ export default function History({ data }: HistoryProps) {
 
       {/* Purchase history */}
       <section className="px-4" aria-labelledby="purchase-heading">
-        <h2 className="text-sm font-semibold text-slate-500 uppercase tracking-wide mb-2" id="purchase-heading">Purchase History</h2>
+        <h2 className="text-lg font-black text-slate-900 mb-3" id="purchase-heading">Purchase History</h2>
         {grouped.map(([month, txns]) => (
           <div key={month} className="mb-4">
-            <p className="text-xs font-semibold text-slate-400 mb-2">{formatMonth(month)}</p>
-            <div className="bg-white border border-slate-200 rounded-xl divide-y divide-slate-100">
+            <p className="text-xs font-bold text-slate-400 uppercase tracking-wide mb-2">{formatMonth(month)}</p>
+            <div className="bg-white rounded-2xl shadow-sm border border-slate-100 divide-y divide-slate-50">
               {txns.map((txn) => {
                 const isExpanded = expandedTxn.has(txn.id)
                 return (
@@ -138,29 +134,31 @@ export default function History({ data }: HistoryProps) {
                     <button
                       onClick={() => toggleTxn(txn.id)}
                       aria-expanded={isExpanded}
-                      className="w-full flex items-center justify-between px-4 py-3 gap-2 text-left min-h-[56px] focus-visible:outline focus-visible:outline-2 focus-visible:outline-orange-500 focus-visible:outline-offset-[-2px]"
+                      className="w-full flex items-center justify-between px-4 py-4 gap-2 text-left min-h-[60px] focus-visible:outline focus-visible:outline-2 focus-visible:outline-green-600 focus-visible:outline-offset-[-2px]"
                     >
                       <div className="flex-1 min-w-0">
-                        <p className="text-sm font-medium text-slate-900">{txn.store}</p>
-                        <p className="text-xs text-slate-400">{new Date(txn.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</p>
+                        <p className="text-sm font-bold text-slate-900">{txn.store}</p>
+                        <p className="text-xs text-slate-400 font-medium mt-0.5">
+                          {new Date(txn.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
+                        </p>
                       </div>
                       <div className="shrink-0 text-right">
-                        <p className="text-sm font-semibold text-slate-900">${txn.totalSpent.toFixed(2)}</p>
-                        <p className="text-xs text-green-600">+{txn.pointsEarned} pts</p>
+                        <p className="text-sm font-black text-slate-900">${txn.totalSpent.toFixed(2)}</p>
+                        <p className="text-xs font-bold text-green-600">+{txn.pointsEarned} pts</p>
                       </div>
-                      <span className="ml-2 text-slate-400 text-xs" aria-hidden="true">{isExpanded ? '▲' : '▼'}</span>
+                      <span className="ml-2 text-slate-300 text-sm" aria-hidden="true">{isExpanded ? '▲' : '▼'}</span>
                     </button>
                     {isExpanded && (
-                      <div className="px-4 pb-3 bg-slate-50">
-                        <ul className="space-y-2" aria-label={`Items purchased at ${txn.store}`}>
+                      <div className="px-4 pb-4 bg-slate-50 rounded-b-2xl">
+                        <ul className="space-y-2.5" aria-label={`Items purchased at ${txn.store}`}>
                           {txn.toys.map((toy, i) => (
-                            <li key={i} className="flex items-center justify-between text-xs">
+                            <li key={i} className="flex items-start justify-between text-xs gap-2">
                               <div>
-                                <span className="font-medium text-slate-700">{toy.name}</span>
-                                <span className="text-slate-400 ml-1">× {toy.quantity}</span>
-                                <p className="text-slate-400">{toy.category} · Ages {toy.ageRange}</p>
+                                <span className="font-bold text-slate-800">{toy.name}</span>
+                                <span className="text-slate-400 ml-1 font-medium">× {toy.quantity}</span>
+                                <p className="text-slate-400 mt-0.5">{toy.category} · Ages {toy.ageRange}</p>
                               </div>
-                              <span className="text-slate-700 font-medium">${(toy.price * toy.quantity).toFixed(2)}</span>
+                              <span className="text-slate-700 font-black shrink-0">${(toy.price * toy.quantity).toFixed(2)}</span>
                             </li>
                           ))}
                         </ul>

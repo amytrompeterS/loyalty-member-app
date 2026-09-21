@@ -18,10 +18,10 @@ export default function FilterChips({ categories, active, onChange }: FilterChip
             key={cat}
             onClick={() => onChange(cat)}
             aria-pressed={isActive}
-            className={`shrink-0 px-3 py-1.5 rounded-full text-sm font-medium border transition-colors min-h-[36px] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500 ${
+            className={`shrink-0 px-4 py-1.5 rounded-full text-sm font-bold border-2 transition-colors min-h-[36px] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600 ${
               isActive
-                ? 'bg-orange-500 text-white border-orange-500'
-                : 'bg-white text-slate-700 border-slate-300 hover:border-orange-300'
+                ? 'bg-green-600 text-white border-green-600'
+                : 'bg-white text-slate-700 border-slate-200 hover:border-green-400'
             }`}
           >
             {cat}
