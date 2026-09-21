@@ -2,6 +2,7 @@ import { useState, useCallback } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import TopBar from './components/TopBar'
 import BottomNav from './components/BottomNav'
+import StarBackground from './components/StarBackground'
 import Home from './pages/Home'
 import Sale from './pages/Sale'
 import StoreLocator from './pages/StoreLocator'
@@ -18,7 +19,6 @@ export default function App() {
 
   const handleRefresh = useCallback(() => {
     setRefreshing(true)
-    // Simulate a short network delay before "refreshing" from local JSON
     setTimeout(() => {
       setData({ ...memberData })
       setRefreshing(false)
@@ -27,7 +27,11 @@ export default function App() {
 
   return (
     <BrowserRouter>
-      <div className="min-h-screen bg-[#1D2951] flex flex-col max-w-2xl mx-auto">
+      {/* Star background renders behind everything, outside the max-width container
+          so it fills the full viewport edge-to-edge */}
+      <StarBackground />
+
+      <div className="relative z-10 min-h-screen bg-[#1D2951]/0 flex flex-col max-w-2xl mx-auto">
         <TopBar
           memberName={data.member.name}
           tier={data.member.tier}
