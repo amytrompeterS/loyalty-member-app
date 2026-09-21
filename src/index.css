@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+:root {
+  --color-accent: #f97316; /* orange-500 — primary accent for tier badges, progress, CTAs */
+}
+
+/* Ensure full-height layout for the app shell */
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Safe area insets for notched/home-indicator phones */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}

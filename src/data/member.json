@@ -1,0 +1,508 @@
+{
+  "member": {
+    "name": "Jordan Rivera",
+    "tier": "Gold",
+    "memberSince": "2021-03-15",
+    "memberId": "GLD-847203",
+    "avatarPlaceholder": "JR"
+  },
+  "pointsBalance": {
+    "current": 3840,
+    "nextTierName": "Platinum",
+    "nextTierThreshold": 5000,
+    "pointsToNextTier": 1160,
+    "expiringSoon": {
+      "points": 320,
+      "expirationDate": "2026-10-31"
+    }
+  },
+  "pointsHistory": [
+    { "date": "2025-10-05", "description": "Purchase – Brick City Store", "points": 120, "runningBalance": 1200 },
+    { "date": "2025-10-31", "description": "Halloween Double Points Event", "points": 240, "runningBalance": 1440 },
+    { "date": "2025-11-08", "description": "Purchase – Westfield Store", "points": 95, "runningBalance": 1535 },
+    { "date": "2025-11-28", "description": "Black Friday Promo – 3× points", "points": 450, "runningBalance": 1985 },
+    { "date": "2025-12-06", "description": "Purchase – Brick City Store", "points": 180, "runningBalance": 2165 },
+    { "date": "2025-12-14", "description": "Holiday Bonus – Gold tier gift", "points": 200, "runningBalance": 2365 },
+    { "date": "2025-12-22", "description": "Purchase – Downtown Store", "points": 210, "runningBalance": 2575 },
+    { "date": "2026-01-10", "description": "Purchase – Westfield Store", "points": 85, "runningBalance": 2660 },
+    { "date": "2026-02-14", "description": "Valentine's Double Points Weekend", "points": 160, "runningBalance": 2820 },
+    { "date": "2026-03-03", "description": "Purchase – Brick City Store", "points": 110, "runningBalance": 2930 },
+    { "date": "2026-03-22", "description": "Spring Sale Purchase", "points": 145, "runningBalance": 3075 },
+    { "date": "2026-04-18", "description": "Purchase – Lakeside Store", "points": 90, "runningBalance": 3165 },
+    { "date": "2026-04-30", "description": "Birthday Month Bonus – 2× points", "points": 180, "runningBalance": 3345 },
+    { "date": "2026-05-10", "description": "Purchase – Westfield Store", "points": 130, "runningBalance": 3475 },
+    { "date": "2026-06-01", "description": "Summer Kickoff Event", "points": 100, "runningBalance": 3575 },
+    { "date": "2026-06-28", "description": "Purchase – Brick City Store", "points": 75, "runningBalance": 3650 },
+    { "date": "2026-07-04", "description": "Fourth of July Triple Points", "points": 270, "runningBalance": 3920 },
+    { "date": "2026-07-19", "description": "Purchase – Downtown Store", "points": 115, "runningBalance": 4035 },
+    { "date": "2026-08-05", "description": "Back-to-School Promo", "points": 200, "runningBalance": 4235 },
+    { "date": "2026-08-22", "description": "Purchase – Lakeside Store", "points": 95, "runningBalance": 4330 },
+    { "date": "2026-09-06", "description": "Purchase – Westfield Store", "points": 140, "runningBalance": 4470 },
+    { "date": "2026-09-14", "description": "Redeemed – Free Small Toy (Q3)", "points": -630, "runningBalance": 3840 }
+  ],
+  "offers": [
+    {
+      "id": "offer-1",
+      "title": "30% Off All Building Sets",
+      "description": "Gold member exclusive. Valid on any building set purchase of $20 or more.",
+      "expirationDate": "2026-10-15",
+      "value": "30% off",
+      "category": "Building Sets",
+      "tierMinimum": "Gold",
+      "isFreeToyClaim": false,
+      "icon": "🧱"
+    },
+    {
+      "id": "offer-2",
+      "title": "Free Small Toy Reward – Q4",
+      "description": "Your Gold tier quarterly free toy reward. Redeem in-store for any toy valued up to $15.",
+      "expirationDate": "2026-12-31",
+      "value": "Free (up to $15)",
+      "category": "All Categories",
+      "tierMinimum": "Gold",
+      "isFreeToyClaim": true,
+      "icon": "🎁"
+    },
+    {
+      "id": "offer-3",
+      "title": "Double Points on STEM Toys",
+      "description": "Earn 2× points on all Educational & STEM purchases this weekend only.",
+      "expirationDate": "2026-09-28",
+      "value": "2× points",
+      "category": "Educational/STEM",
+      "tierMinimum": null,
+      "isFreeToyClaim": false,
+      "icon": "🔬"
+    },
+    {
+      "id": "offer-4",
+      "title": "20% Off Puzzles",
+      "description": "Save 20% on any puzzle 500 pieces or more.",
+      "expirationDate": "2026-10-31",
+      "value": "20% off",
+      "category": "Puzzles",
+      "tierMinimum": null,
+      "isFreeToyClaim": false,
+      "icon": "🧩"
+    },
+    {
+      "id": "offer-5",
+      "title": "40% Off Board Games",
+      "description": "Platinum & Gold exclusive. Select board games on clearance.",
+      "expirationDate": "2026-10-01",
+      "value": "40% off",
+      "category": "Board Games",
+      "tierMinimum": "Gold",
+      "isFreeToyClaim": false,
+      "icon": "🎲"
+    },
+    {
+      "id": "offer-6",
+      "title": "15% Off Arts & Crafts",
+      "description": "Get creative for less. Valid on all Arts & Crafts items.",
+      "expirationDate": "2026-10-20",
+      "value": "15% off",
+      "category": "Arts & Crafts",
+      "tierMinimum": null,
+      "isFreeToyClaim": false,
+      "icon": "🎨"
+    },
+    {
+      "id": "offer-7",
+      "title": "25% Off Outdoor & Ride-On",
+      "description": "Fall clearance on outdoor toys. While supplies last.",
+      "expirationDate": "2026-10-10",
+      "value": "25% off",
+      "category": "Outdoor & Ride-On",
+      "tierMinimum": null,
+      "isFreeToyClaim": false,
+      "icon": "🛴"
+    }
+  ],
+  "saleItems": [
+    {
+      "id": "sale-1",
+      "name": "MegaBrick City Skyline Set",
+      "category": "Building Sets",
+      "ageRange": "8–14",
+      "originalPrice": 79.99,
+      "salePrice": 55.99,
+      "percentOff": 30,
+      "icon": "🏙️",
+      "recommended": true
+    },
+    {
+      "id": "sale-2",
+      "name": "Junior Architect Bridge Kit",
+      "category": "Building Sets",
+      "ageRange": "6–10",
+      "originalPrice": 34.99,
+      "salePrice": 24.49,
+      "percentOff": 30,
+      "icon": "🌉",
+      "recommended": true
+    },
+    {
+      "id": "sale-3",
+      "name": "SolarSystem Science Lab",
+      "category": "Educational/STEM",
+      "ageRange": "7–12",
+      "originalPrice": 44.99,
+      "salePrice": 31.49,
+      "percentOff": 30,
+      "icon": "🪐",
+      "recommended": true
+    },
+    {
+      "id": "sale-4",
+      "name": "Circuit Explorer Starter Kit",
+      "category": "Educational/STEM",
+      "ageRange": "8–14",
+      "originalPrice": 59.99,
+      "salePrice": 41.99,
+      "percentOff": 30,
+      "icon": "⚡",
+      "recommended": true
+    },
+    {
+      "id": "sale-5",
+      "name": "World Capitals 1000-Piece Puzzle",
+      "category": "Puzzles",
+      "ageRange": "10+",
+      "originalPrice": 24.99,
+      "salePrice": 17.49,
+      "percentOff": 30,
+      "icon": "🗺️",
+      "recommended": false
+    },
+    {
+      "id": "sale-6",
+      "name": "Catan Junior",
+      "category": "Board Games",
+      "ageRange": "6–10",
+      "originalPrice": 29.99,
+      "salePrice": 17.99,
+      "percentOff": 40,
+      "icon": "🎲",
+      "recommended": false
+    },
+    {
+      "id": "sale-7",
+      "name": "Deluxe Watercolor Studio",
+      "category": "Arts & Crafts",
+      "ageRange": "5–12",
+      "originalPrice": 22.99,
+      "salePrice": 16.09,
+      "percentOff": 30,
+      "icon": "🎨",
+      "recommended": false
+    },
+    {
+      "id": "sale-8",
+      "name": "Adventure Scooter – Red",
+      "category": "Outdoor & Ride-On",
+      "ageRange": "5–9",
+      "originalPrice": 89.99,
+      "salePrice": 67.49,
+      "percentOff": 25,
+      "icon": "🛴",
+      "recommended": false
+    },
+    {
+      "id": "sale-9",
+      "name": "Space Ranger Action Set",
+      "category": "Dolls & Action Figures",
+      "ageRange": "4–10",
+      "originalPrice": 19.99,
+      "salePrice": 13.99,
+      "percentOff": 30,
+      "icon": "🚀",
+      "recommended": false
+    },
+    {
+      "id": "sale-10",
+      "name": "Mini Robot Builder XL",
+      "category": "Educational/STEM",
+      "ageRange": "8–12",
+      "originalPrice": 49.99,
+      "salePrice": 34.99,
+      "percentOff": 30,
+      "icon": "🤖",
+      "recommended": true
+    },
+    {
+      "id": "sale-11",
+      "name": "Woodland Animals 500-Piece Puzzle",
+      "category": "Puzzles",
+      "ageRange": "8+",
+      "originalPrice": 18.99,
+      "salePrice": 12.65,
+      "percentOff": 33,
+      "icon": "🦊",
+      "recommended": false
+    },
+    {
+      "id": "sale-12",
+      "name": "Backyard Splash Pad",
+      "category": "Outdoor & Ride-On",
+      "ageRange": "3–8",
+      "originalPrice": 39.99,
+      "salePrice": 27.99,
+      "percentOff": 30,
+      "icon": "💦",
+      "recommended": false
+    }
+  ],
+  "storeLocations": [
+    {
+      "id": "store-1",
+      "name": "Brick City Flagship",
+      "address": "1200 Toy Lane, Chicago, IL 60601",
+      "distance": "0.8 mi",
+      "hours": "Mon–Sat 9am–8pm, Sun 10am–6pm",
+      "phone": "(312) 555-0101",
+      "lat": 41.8827,
+      "lng": -87.6233
+    },
+    {
+      "id": "store-2",
+      "name": "Westfield Mall",
+      "address": "500 Westfield Blvd, Chicago, IL 60610",
+      "distance": "2.1 mi",
+      "hours": "Mon–Sat 10am–9pm, Sun 11am–7pm",
+      "phone": "(312) 555-0202",
+      "lat": 41.8981,
+      "lng": -87.6318
+    },
+    {
+      "id": "store-3",
+      "name": "Downtown Loop",
+      "address": "88 State St, Chicago, IL 60605",
+      "distance": "3.4 mi",
+      "hours": "Mon–Sat 9am–7pm, Sun 12pm–5pm",
+      "phone": "(312) 555-0303",
+      "lat": 41.8793,
+      "lng": -87.6277
+    },
+    {
+      "id": "store-4",
+      "name": "Lakeside Commons",
+      "address": "2240 N Lake Shore Dr, Chicago, IL 60614",
+      "distance": "4.0 mi",
+      "hours": "Mon–Sat 10am–8pm, Sun 11am–6pm",
+      "phone": "(312) 555-0404",
+      "lat": 41.9224,
+      "lng": -87.6432
+    },
+    {
+      "id": "store-5",
+      "name": "Northbrook Square",
+      "address": "700 Skokie Blvd, Northbrook, IL 60062",
+      "distance": "14.5 mi",
+      "hours": "Mon–Sat 10am–9pm, Sun 11am–6pm",
+      "phone": "(847) 555-0505",
+      "lat": 42.1250,
+      "lng": -87.8262
+    },
+    {
+      "id": "store-6",
+      "name": "Oak Park Village",
+      "address": "300 Lake St, Oak Park, IL 60302",
+      "distance": "9.2 mi",
+      "hours": "Mon–Sat 9am–7pm, Sun 10am–5pm",
+      "phone": "(708) 555-0606",
+      "lat": 41.8850,
+      "lng": -87.7845
+    },
+    {
+      "id": "store-7",
+      "name": "Naperville Crossing",
+      "address": "1800 Freedom Dr, Naperville, IL 60563",
+      "distance": "28.3 mi",
+      "hours": "Mon–Sat 10am–9pm, Sun 11am–7pm",
+      "phone": "(630) 555-0707",
+      "lat": 41.7854,
+      "lng": -88.1472
+    },
+    {
+      "id": "store-8",
+      "name": "Evanston Central",
+      "address": "1505 Sherman Ave, Evanston, IL 60201",
+      "distance": "12.8 mi",
+      "hours": "Mon–Sat 10am–7pm, Sun 11am–5pm",
+      "phone": "(847) 555-0808",
+      "lat": 42.0451,
+      "lng": -87.6877
+    },
+    {
+      "id": "store-9",
+      "name": "Schaumburg Towne Centre",
+      "address": "5 Woodfield Mall, Schaumburg, IL 60173",
+      "distance": "22.7 mi",
+      "hours": "Mon–Sat 10am–9pm, Sun 11am–6pm",
+      "phone": "(847) 555-0909",
+      "lat": 42.0328,
+      "lng": -88.0814
+    }
+  ],
+  "purchaseHistory": [
+    {
+      "id": "txn-1",
+      "date": "2026-09-06",
+      "store": "Westfield Mall",
+      "toys": [
+        { "name": "MegaBrick Space Station", "category": "Building Sets", "ageRange": "9–14", "quantity": 1, "price": 89.99 }
+      ],
+      "totalSpent": 89.99,
+      "pointsEarned": 140
+    },
+    {
+      "id": "txn-2",
+      "date": "2026-08-22",
+      "store": "Lakeside Commons",
+      "toys": [
+        { "name": "Circuit Explorer Starter Kit", "category": "Educational/STEM", "ageRange": "8–14", "quantity": 1, "price": 59.99 }
+      ],
+      "totalSpent": 59.99,
+      "pointsEarned": 95
+    },
+    {
+      "id": "txn-3",
+      "date": "2026-08-05",
+      "store": "Brick City Flagship",
+      "toys": [
+        { "name": "SolarSystem Science Lab", "category": "Educational/STEM", "ageRange": "7–12", "quantity": 1, "price": 44.99 },
+        { "name": "World Capitals 1000-Piece Puzzle", "category": "Puzzles", "ageRange": "10+", "quantity": 1, "price": 24.99 }
+      ],
+      "totalSpent": 69.98,
+      "pointsEarned": 128
+    },
+    {
+      "id": "txn-4",
+      "date": "2026-07-19",
+      "store": "Downtown Loop",
+      "toys": [
+        { "name": "Junior Architect Bridge Kit", "category": "Building Sets", "ageRange": "6–10", "quantity": 1, "price": 34.99 },
+        { "name": "Mini Robot Builder XL", "category": "Educational/STEM", "ageRange": "8–12", "quantity": 1, "price": 49.99 }
+      ],
+      "totalSpent": 84.98,
+      "pointsEarned": 130
+    },
+    {
+      "id": "txn-5",
+      "date": "2026-06-28",
+      "store": "Brick City Flagship",
+      "toys": [
+        { "name": "MegaBrick Castle Fortress", "category": "Building Sets", "ageRange": "8–12", "quantity": 1, "price": 64.99 }
+      ],
+      "totalSpent": 64.99,
+      "pointsEarned": 97
+    },
+    {
+      "id": "txn-6",
+      "date": "2026-05-10",
+      "store": "Westfield Mall",
+      "toys": [
+        { "name": "Deluxe Watercolor Studio", "category": "Arts & Crafts", "ageRange": "5–12", "quantity": 1, "price": 22.99 },
+        { "name": "Woodland Animals Puzzle 500pc", "category": "Puzzles", "ageRange": "8+", "quantity": 1, "price": 18.99 }
+      ],
+      "totalSpent": 41.98,
+      "pointsEarned": 86
+    },
+    {
+      "id": "txn-7",
+      "date": "2026-04-18",
+      "store": "Lakeside Commons",
+      "toys": [
+        { "name": "Chemistry Lab Kit", "category": "Educational/STEM", "ageRange": "8–12", "quantity": 1, "price": 54.99 }
+      ],
+      "totalSpent": 54.99,
+      "pointsEarned": 90
+    },
+    {
+      "id": "txn-8",
+      "date": "2026-03-22",
+      "store": "Brick City Flagship",
+      "toys": [
+        { "name": "MegaBrick Deep Sea Explorer", "category": "Building Sets", "ageRange": "8–14", "quantity": 1, "price": 74.99 },
+        { "name": "Catan Junior", "category": "Board Games", "ageRange": "6–10", "quantity": 1, "price": 29.99 }
+      ],
+      "totalSpent": 104.98,
+      "pointsEarned": 157
+    },
+    {
+      "id": "txn-9",
+      "date": "2026-03-03",
+      "store": "Brick City Flagship",
+      "toys": [
+        { "name": "Robotics Coding Challenge Set", "category": "Educational/STEM", "ageRange": "10–14", "quantity": 1, "price": 69.99 }
+      ],
+      "totalSpent": 69.99,
+      "pointsEarned": 110
+    },
+    {
+      "id": "txn-10",
+      "date": "2026-01-10",
+      "store": "Westfield Mall",
+      "toys": [
+        { "name": "MegaBrick Classic City Set", "category": "Building Sets", "ageRange": "7–12", "quantity": 1, "price": 54.99 }
+      ],
+      "totalSpent": 54.99,
+      "pointsEarned": 85
+    },
+    {
+      "id": "txn-11",
+      "date": "2025-12-22",
+      "store": "Downtown Loop",
+      "toys": [
+        { "name": "MegaBrick Ultimate Train Set", "category": "Building Sets", "ageRange": "9–14", "quantity": 1, "price": 119.99 },
+        { "name": "Space Mission Puzzle 750pc", "category": "Puzzles", "ageRange": "10+", "quantity": 1, "price": 21.99 }
+      ],
+      "totalSpent": 141.98,
+      "pointsEarned": 213
+    },
+    {
+      "id": "txn-12",
+      "date": "2025-12-06",
+      "store": "Brick City Flagship",
+      "toys": [
+        { "name": "Electric Circuit Playground", "category": "Educational/STEM", "ageRange": "7–11", "quantity": 1, "price": 39.99 },
+        { "name": "Junior Architect Sky Bridge", "category": "Building Sets", "ageRange": "6–10", "quantity": 2, "price": 29.99 }
+      ],
+      "totalSpent": 99.97,
+      "pointsEarned": 180
+    },
+    {
+      "id": "txn-13",
+      "date": "2025-11-28",
+      "store": "Westfield Mall",
+      "toys": [
+        { "name": "MegaBrick Pirate Ship", "category": "Building Sets", "ageRange": "8–14", "quantity": 1, "price": 89.99 },
+        { "name": "Coding for Kids Deluxe Kit", "category": "Educational/STEM", "ageRange": "8–12", "quantity": 1, "price": 49.99 }
+      ],
+      "totalSpent": 139.98,
+      "pointsEarned": 315
+    },
+    {
+      "id": "txn-14",
+      "date": "2025-11-08",
+      "store": "Westfield Mall",
+      "toys": [
+        { "name": "Nature Explorer Field Kit", "category": "Educational/STEM", "ageRange": "6–12", "quantity": 1, "price": 34.99 },
+        { "name": "Mosaic Art Studio", "category": "Arts & Crafts", "ageRange": "7–12", "quantity": 1, "price": 27.99 }
+      ],
+      "totalSpent": 62.98,
+      "pointsEarned": 95
+    },
+    {
+      "id": "txn-15",
+      "date": "2025-10-05",
+      "store": "Brick City Flagship",
+      "toys": [
+        { "name": "MegaBrick Haunted Mansion", "category": "Building Sets", "ageRange": "9–14", "quantity": 1, "price": 79.99 }
+      ],
+      "totalSpent": 79.99,
+      "pointsEarned": 120
+    }
+  ]
+}
