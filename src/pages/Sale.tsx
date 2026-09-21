@@ -48,7 +48,12 @@ export default function Sale({ data }: SaleProps) {
               </span>
             )}
             <div className="flex items-center gap-3 mb-3">
-              <span className="text-3xl" aria-hidden="true">{item.icon}</span>
+              <img
+                src={item.image}
+                alt={item.name}
+                className="w-16 h-16 rounded-xl object-cover shrink-0 bg-slate-100"
+                loading="lazy"
+              />
               <div className="flex-1 min-w-0 pr-16">
                 <h2 className="font-semibold text-slate-900 text-sm leading-snug">{item.name}</h2>
                 <p className="text-xs text-slate-500 mt-0.5">{item.category} · Ages {item.ageRange}</p>

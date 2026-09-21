@@ -128,7 +128,7 @@
       "originalPrice": 79.99,
       "salePrice": 55.99,
       "percentOff": 30,
-      "icon": "🏙️",
+      "image": "https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=300&h=300&fit=crop&auto=format",
       "recommended": true
     },
     {
@@ -139,7 +139,7 @@
       "originalPrice": 34.99,
       "salePrice": 24.49,
       "percentOff": 30,
-      "icon": "🌉",
+      "image": "https://images.unsplash.com/photo-1633469924738-52101af51d87?w=300&h=300&fit=crop&auto=format",
       "recommended": true
     },
     {
@@ -150,7 +150,7 @@
       "originalPrice": 44.99,
       "salePrice": 31.49,
       "percentOff": 30,
-      "icon": "🪐",
+      "image": "https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=300&h=300&fit=crop&auto=format",
       "recommended": true
     },
     {
@@ -161,7 +161,7 @@
       "originalPrice": 59.99,
       "salePrice": 41.99,
       "percentOff": 30,
-      "icon": "⚡",
+      "image": "https://images.unsplash.com/photo-1603354351149-e97b9124020d?w=300&h=300&fit=crop&auto=format",
       "recommended": true
     },
     {
@@ -172,7 +172,7 @@
       "originalPrice": 24.99,
       "salePrice": 17.49,
       "percentOff": 30,
-      "icon": "🗺️",
+      "image": "https://images.unsplash.com/photo-1612611741189-a9b9eb01d515?w=300&h=300&fit=crop&auto=format",
       "recommended": false
     },
     {
@@ -183,7 +183,7 @@
       "originalPrice": 29.99,
       "salePrice": 17.99,
       "percentOff": 40,
-      "icon": "🎲",
+      "image": "https://images.unsplash.com/photo-1629760946220-5693ee4c46ac?w=300&h=300&fit=crop&auto=format",
       "recommended": false
     },
     {
@@ -194,7 +194,7 @@
       "originalPrice": 22.99,
       "salePrice": 16.09,
       "percentOff": 30,
-      "icon": "🎨",
+      "image": "https://images.unsplash.com/photo-1560421683-6856ea585c78?w=300&h=300&fit=crop&auto=format",
       "recommended": false
     },
     {
@@ -205,7 +205,7 @@
       "originalPrice": 89.99,
       "salePrice": 67.49,
       "percentOff": 25,
-      "icon": "🛴",
+      "image": "https://images.unsplash.com/photo-1785644894283-eff43aa26e71?w=300&h=300&fit=crop&auto=format",
       "recommended": false
     },
     {
@@ -216,7 +216,7 @@
       "originalPrice": 19.99,
       "salePrice": 13.99,
       "percentOff": 30,
-      "icon": "🚀",
+      "image": "https://images.unsplash.com/photo-1606663889134-b1dedb5ed8b7?w=300&h=300&fit=crop&auto=format",
       "recommended": false
     },
     {
@@ -227,7 +227,7 @@
       "originalPrice": 49.99,
       "salePrice": 34.99,
       "percentOff": 30,
-      "icon": "🤖",
+      "image": "https://images.unsplash.com/photo-1603354350266-a8de3496163b?w=300&h=300&fit=crop&auto=format",
       "recommended": true
     },
     {
@@ -238,7 +238,7 @@
       "originalPrice": 18.99,
       "salePrice": 12.65,
       "percentOff": 33,
-      "icon": "🦊",
+      "image": "https://images.unsplash.com/photo-1637094408647-0d81d08f81b5?w=300&h=300&fit=crop&auto=format",
       "recommended": false
     },
     {
@@ -249,7 +249,7 @@
       "originalPrice": 39.99,
       "salePrice": 27.99,
       "percentOff": 30,
-      "icon": "💦",
+      "image": "https://images.unsplash.com/photo-1772306096744-3137540d0113?w=300&h=300&fit=crop&auto=format",
       "recommended": false
     }
   ],

@@ -43,7 +43,7 @@ export interface SaleItem {
   originalPrice: number
   salePrice: number
   percentOff: number
-  icon: string
+  image: string
   recommended: boolean
 }
 

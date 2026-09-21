@@ -148,7 +148,12 @@ export default function Home({ data, onRefresh, refreshing }: HomeProps) {
           <div className="flex flex-col gap-3">
             {topSaleItems.map((item) => (
               <div key={item.id} className="bg-white border border-slate-200 rounded-xl p-4 flex items-center gap-3">
-                <span className="text-2xl" aria-hidden="true">{item.icon}</span>
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  className="w-12 h-12 rounded-lg object-cover shrink-0 bg-slate-100"
+                  loading="lazy"
+                />
                 <div className="flex-1 min-w-0">
                   <p className="font-semibold text-slate-900 text-sm truncate">{item.name}</p>
                   <p className="text-xs text-slate-500">Ages {item.ageRange}</p>
