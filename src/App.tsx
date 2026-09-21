@@ -3,7 +3,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import TopBar from './components/TopBar'
 import BottomNav from './components/BottomNav'
 import Home from './pages/Home'
-import Offers from './pages/Offers'
 import Sale from './pages/Sale'
 import StoreLocator from './pages/StoreLocator'
 import History from './pages/History'
@@ -37,7 +36,6 @@ export default function App() {
         <div className="flex-1">
           <Routes>
             <Route path="/" element={<Home data={data} onRefresh={handleRefresh} refreshing={refreshing} />} />
-            <Route path="/offers" element={<Offers data={data} />} />
             <Route path="/sale" element={<Sale data={data} />} />
             <Route path="/stores" element={<StoreLocator data={data} />} />
             <Route path="/history" element={<History data={data} />} />

@@ -103,7 +103,7 @@ export default function Home({ data, onRefresh, refreshing }: HomeProps) {
               </p>
             </div>
             <button
-              onClick={() => navigate('/offers')}
+              onClick={() => navigate('/sale')}
               className="shrink-0 bg-[#FF6B6B] text-[#1D2951] text-xs font-black px-4 py-2.5 rounded-xl min-h-[44px] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#4ECDC4]"
             >
               Redeem
@@ -118,7 +118,7 @@ export default function Home({ data, onRefresh, refreshing }: HomeProps) {
           <div className="flex items-center justify-between mb-3">
             <h2 className="text-lg font-black text-white" id="offers-heading">For You</h2>
             <button
-              onClick={() => navigate('/offers')}
+              onClick={() => navigate('/sale')}
               className="text-sm font-bold text-[#4ECDC4] min-h-[44px] px-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#4ECDC4]"
             >
               See all

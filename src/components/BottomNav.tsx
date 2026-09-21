@@ -1,8 +1,6 @@
 import { NavLink } from 'react-router-dom'
 import HomeRoundedIcon from '@mui/icons-material/HomeRounded'
-import LocalOfferIcon from '@mui/icons-material/LocalOffer'
 import SellIcon from '@mui/icons-material/Sell'
-import LocationOnIcon from '@mui/icons-material/LocationOn'
 import ReceiptLongIcon from '@mui/icons-material/ReceiptLong'
 import AccountCircleIcon from '@mui/icons-material/AccountCircle'
 import type { SvgIconComponent } from '@mui/icons-material'
@@ -15,9 +13,7 @@ interface Tab {
 
 const tabs: Tab[] = [
   { to: '/',        label: 'Home',    Icon: HomeRoundedIcon },
-  { to: '/offers',  label: 'Offers',  Icon: LocalOfferIcon },
   { to: '/sale',    label: 'Sale',    Icon: SellIcon },
-  { to: '/stores',  label: 'Stores',  Icon: LocationOnIcon },
   { to: '/history', label: 'History', Icon: ReceiptLongIcon },
   { to: '/account', label: 'Account', Icon: AccountCircleIcon },
 ]
@@ -45,8 +41,8 @@ export default function BottomNav() {
           >
             {({ isActive }) => (
               <>
-                <Icon sx={{ fontSize: 22 }} aria-hidden="true" />
-                <span className={`text-[10px] mt-0.5 font-bold ${isActive ? 'text-[#FF6B6B]' : 'text-white/40'}`}>
+                <Icon sx={{ fontSize: 24 }} aria-hidden="true" />
+                <span className={`text-[11px] mt-0.5 font-bold ${isActive ? 'text-[#FF6B6B]' : 'text-white/40'}`}>
                   {label}
                 </span>
               </>
