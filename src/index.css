@@ -1,11 +1,18 @@
 @import "tailwindcss";
 
+/* Space Explorer palette */
 :root {
-  --color-accent: #16a34a; /* green-600 — primary accent */
+  --navy:  #1D2951;
+  --purple: #5B4B8A;
+  --coral:  #FF6B6B;
+  --yellow: #FFD93D;
+  --teal:   #4ECDC4;
+  --card:   #253166;
 }
 
 html, body, #root {
   height: 100%;
+  background-color: #1D2951;
 }
 
 body {

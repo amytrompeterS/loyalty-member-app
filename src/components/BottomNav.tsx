@@ -27,7 +27,7 @@ export default function BottomNav() {
     <nav
       role="tablist"
       aria-label="Main navigation"
-      className="fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-slate-100 pb-safe shadow-[0_-1px_0_0_rgb(0,0,0,0.05)]"
+      className="fixed bottom-0 left-0 right-0 z-40 bg-[#1D2951] border-t border-white/10 pb-safe"
     >
       <div className="flex max-w-2xl mx-auto">
         {tabs.map(({ to, label, Icon }) => (
@@ -38,15 +38,15 @@ export default function BottomNav() {
             role="tab"
             aria-label={label}
             className={({ isActive }) =>
-              `flex-1 flex flex-col items-center justify-center py-2 min-h-[56px] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-green-600 focus-visible:outline-offset-[-2px] ${
-                isActive ? 'text-green-600' : 'text-slate-400 hover:text-slate-600'
+              `flex-1 flex flex-col items-center justify-center py-2 min-h-[56px] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#4ECDC4] focus-visible:outline-offset-[-2px] ${
+                isActive ? 'text-[#FF6B6B]' : 'text-white/40 hover:text-white/70'
               }`
             }
           >
             {({ isActive }) => (
               <>
                 <Icon sx={{ fontSize: 22 }} aria-hidden="true" />
-                <span className={`text-[10px] mt-0.5 font-semibold ${isActive ? 'text-green-600' : 'text-slate-400'}`}>
+                <span className={`text-[10px] mt-0.5 font-bold ${isActive ? 'text-[#FF6B6B]' : 'text-white/40'}`}>
                   {label}
                 </span>
               </>

@@ -28,7 +28,7 @@ export default function App() {
 
   return (
     <BrowserRouter>
-      <div className="min-h-screen bg-slate-50 flex flex-col max-w-2xl mx-auto">
+      <div className="min-h-screen bg-[#1D2951] flex flex-col max-w-2xl mx-auto">
         <TopBar
           memberName={data.member.name}
           tier={data.member.tier}
