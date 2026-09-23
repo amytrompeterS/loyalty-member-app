@@ -68,11 +68,15 @@ export default function History({ data }: HistoryProps) {
             <p className="text-4xl font-black text-white">{totalPoints.toLocaleString()}</p>
           </div>
           <div className="text-right">
-            <p className="text-xs font-medium text-white/40">{data.pointsBalance.pointsToNextTier.toLocaleString()} to {data.pointsBalance.nextTierName}</p>
+            {data.pointsBalance.pointsToNextTier != null && data.pointsBalance.nextTierName != null ? (
+              <p className="text-xs font-medium text-white/40">{data.pointsBalance.pointsToNextTier.toLocaleString()} to {data.pointsBalance.nextTierName}</p>
+            ) : (
+              <p className="text-xs font-medium text-white/40">Highest tier reached</p>
+            )}
             <div className="mt-2 w-28 h-1.5 bg-white/10 rounded-full overflow-hidden">
               <div
                 className="h-full bg-[#4ECDC4] rounded-full"
-                style={{ width: `${Math.round((totalPoints / data.pointsBalance.nextTierThreshold) * 100)}%` }}
+                style={{ width: data.pointsBalance.nextTierThreshold != null ? `${Math.round((totalPoints / data.pointsBalance.nextTierThreshold) * 100)}%` : '100%' }}
               />
             </div>
           </div>

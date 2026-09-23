@@ -142,7 +142,7 @@ export default function Account({ data }: AccountProps) {
               <span className="text-xs font-black px-3 py-1.5 rounded-full uppercase tracking-widest bg-[#4ECDC4] text-[#1D2951]">
                 Platinum
               </span>
-              <span className="text-xs text-white/40 font-medium">{pointsBalance.pointsToNextTier.toLocaleString()} pts away</span>
+              <span className="text-xs text-white/40 font-medium">{(pointsBalance.pointsToNextTier ?? 0).toLocaleString()} pts away</span>
             </div>
             <dl className="space-y-4 text-sm mb-5">
               <div>
@@ -170,12 +170,12 @@ export default function Account({ data }: AccountProps) {
             <div>
               <div className="flex justify-between text-xs text-white/40 font-medium mb-1.5">
                 <span>{pointsBalance.current.toLocaleString()} pts</span>
-                <span>{pointsBalance.nextTierThreshold.toLocaleString()} pts</span>
+                <span>{(pointsBalance.nextTierThreshold ?? 0).toLocaleString()} pts</span>
               </div>
               <div className="w-full h-2 bg-white/10 rounded-full overflow-hidden">
                 <div
                   className="h-full bg-[#4ECDC4] rounded-full transition-all"
-                  style={{ width: `${Math.min(100, Math.round((pointsBalance.current / pointsBalance.nextTierThreshold) * 100))}%` }}
+                  style={{ width: `${Math.min(100, Math.round((pointsBalance.current / (pointsBalance.nextTierThreshold ?? 1)) * 100))}%` }}
                 />
               </div>
             </div>
