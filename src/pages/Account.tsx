@@ -133,6 +133,56 @@ export default function Account({ data }: AccountProps) {
         </div>
       </section>
 
+      {/* Platinum upgrade teaser */}
+      {member.tier !== 'Platinum' && (
+        <section className="px-4 pb-4" aria-labelledby="platinum-heading">
+          <h2 className="text-lg font-black text-white mb-3" id="platinum-heading">Unlock Platinum</h2>
+          <div className="bg-[#253166] border border-[#4ECDC4]/30 rounded-2xl p-5">
+            <div className="flex items-center justify-between mb-4">
+              <span className="text-xs font-black px-3 py-1.5 rounded-full uppercase tracking-widest bg-[#4ECDC4] text-[#1D2951]">
+                Platinum
+              </span>
+              <span className="text-xs text-white/40 font-medium">{pointsBalance.pointsToNextTier.toLocaleString()} pts away</span>
+            </div>
+            <dl className="space-y-4 text-sm mb-5">
+              <div>
+                <dt className="text-xs text-white/30 font-black uppercase tracking-widest mb-1">Earn Rate</dt>
+                <dd className="text-white/80 font-semibold">{tierBenefits.Platinum.earnRate}</dd>
+              </div>
+              <div>
+                <dt className="text-xs text-white/30 font-black uppercase tracking-widest mb-1">Offer Access</dt>
+                <dd className="text-white/80 font-semibold">{tierBenefits.Platinum.offers}</dd>
+              </div>
+              <div>
+                <dt className="text-xs text-white/30 font-black uppercase tracking-widest mb-1">Perks</dt>
+                <dd>
+                  <ul className="space-y-2">
+                    {tierBenefits.Platinum.perks.map((perk, i) => (
+                      <li key={i} className="text-white/80 font-semibold flex items-start gap-2">
+                        <span className="text-[#4ECDC4] mt-0.5 font-black shrink-0" aria-hidden="true">✓</span>
+                        {perk}
+                      </li>
+                    ))}
+                  </ul>
+                </dd>
+              </div>
+            </dl>
+            <div>
+              <div className="flex justify-between text-xs text-white/40 font-medium mb-1.5">
+                <span>{pointsBalance.current.toLocaleString()} pts</span>
+                <span>{pointsBalance.nextTierThreshold.toLocaleString()} pts</span>
+              </div>
+              <div className="w-full h-2 bg-white/10 rounded-full overflow-hidden">
+                <div
+                  className="h-full bg-[#4ECDC4] rounded-full transition-all"
+                  style={{ width: `${Math.min(100, Math.round((pointsBalance.current / pointsBalance.nextTierThreshold) * 100))}%` }}
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Account actions */}
       <section className="px-4 pb-4" aria-labelledby="actions-heading">
         <h2 className="text-lg font-black text-white mb-3" id="actions-heading">Account</h2>

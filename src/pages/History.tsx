@@ -52,11 +52,32 @@ export default function History({ data }: HistoryProps) {
     })
   }
 
+  const totalPoints = data.pointsBalance.current
+
   return (
     <main className="pb-24">
       <div className="px-4 pt-5 pb-4">
         <h1 className="text-2xl font-black text-white">Points History</h1>
       </div>
+
+      {/* Total points summary */}
+      <section className="px-4 mb-5" aria-label="Total points balance">
+        <div className="bg-[#253166] border border-white/10 rounded-2xl px-5 py-4 flex items-center justify-between">
+          <div>
+            <p className="text-xs font-black text-white/40 uppercase tracking-widest mb-1">Total Points</p>
+            <p className="text-4xl font-black text-white">{totalPoints.toLocaleString()}</p>
+          </div>
+          <div className="text-right">
+            <p className="text-xs font-medium text-white/40">{data.pointsBalance.pointsToNextTier.toLocaleString()} to {data.pointsBalance.nextTierName}</p>
+            <div className="mt-2 w-28 h-1.5 bg-white/10 rounded-full overflow-hidden">
+              <div
+                className="h-full bg-[#4ECDC4] rounded-full"
+                style={{ width: `${Math.round((totalPoints / data.pointsBalance.nextTierThreshold) * 100)}%` }}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Chart */}
       <section className="px-4 mb-5" aria-labelledby="chart-heading">
